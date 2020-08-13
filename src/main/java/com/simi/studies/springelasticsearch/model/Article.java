@@ -14,7 +14,7 @@ public class Article {
 
   private String title;
 
-  @Field(type = FieldType.Nested, includeInParent = true)
+  @Field(type = FieldType.Nested)
   private List<Author> authors;
 
   public String getId() {
