@@ -7,6 +7,9 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 
 public interface ArticleRepository extends ElasticsearchRepository<Article, String> {
 
-  Page<Article> findByTitle(String authorName, Pageable pageable);
+
+  Page<Article> findByAuthorsName(String name, Pageable pageable);
+
+  Page<Article> findByTitle(String title, Pageable pageable);
 
 }
